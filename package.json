@@ -1,7 +1,7 @@
 {
   "name": "react-parse-htmlstring",
   "version": "1.0.3",
-  "description": "Parse any string that you can 'dangerouslySetInnerHTML' or even return as a React component on a html tag of your choice!",
+  "description": "Parse any string and return a React component on a html container of your choice!",
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf dist lib node_modules demo/dist demo/node_modules",
