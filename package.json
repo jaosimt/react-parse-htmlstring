@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf dist lib node_modules demo/dist demo/node_modules",
-    "build": "npm install && npm link && npm run build:lib && npm run build:umd && cd demo && npm install && npm link react-parse-htmlstring && npm run build && cd ..",
+    "build": "npm install && npm run build:lib && npm run build:umd && cd demo && npm install && npm run build && cd ..",
     "build:lib": "rimraf lib && babel ./src -d lib",
     "build:umd": "webpack --config webpack.config.development.js",
     "prerelease": "npm run clean",
