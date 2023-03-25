@@ -4,6 +4,8 @@ body {
 	#app {
 		h1 { color: green; }
 	}
+	
+	font-family: "JetBrains Mono", "Courier New", sans-serif;
 }
 
 .p-1 { padding: 0.5rem !important; }
@@ -12,4 +14,23 @@ body {
 .mt-1 { margin-top: 1rem !important; }
 .mt-2 { margin-top: 2rem !important; }
 
-.w-full { width: 100% !important; }
+textarea { 
+	padding: 0.5rem;
+	width: calc(100% - 1rem); 
+}
+
+button {
+	background-color: green;
+	color: white;
+	padding: 0.5rem;
+	border-radius: 5px;
+	border: 1px solid gainsboro;
+	cursor: pointer;
+}
+
+.demo {
+	padding: 1rem;
+	border-radius: 3px;
+	border: 1px solid gainsboro;
+	display: inline-flex;
+}
