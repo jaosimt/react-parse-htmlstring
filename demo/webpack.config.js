@@ -7,13 +7,24 @@ module.exports = {
 	entry: path.join(__dirname, 'src', 'index.js'),
 	output: {
 		path: path.join(__dirname, 'dist'),
-		filename: 'bundle.js'
+		filename: 'react-parse-htmlstring-demo.js'
+	},
+	resolve: {
+		extensions: [
+			'.js',
+			'.jsx'
+		],
+		modules: [
+			'node_modules',
+			path.resolve(__dirname, 'src'),
+		],
+		aliasFields: ['browser']
 	},
 	module: {
 		rules: [
 			{
 				test: /\.(js|jsx)$/,
-				exclude: /nodeModules/,
+				exclude: /node_modules/,
 				use: {
 					loader: 'babel-loader'
 				}

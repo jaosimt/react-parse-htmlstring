@@ -30,8 +30,7 @@ module.exports = {
 			{
 				test: /\.(js|jsx)$/,
 				include: path.resolve(__dirname, 'src'),
-				enforce: 'pre',
-				exclude: /nodeModules/,
+				exclude: /node_modules/,
 				use: 'babel-loader'
 			}
 		]
