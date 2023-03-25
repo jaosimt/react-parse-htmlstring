@@ -1,6 +1,6 @@
 {
   "name": "react-parse-htmlstring",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Parse any string that you can 'dangerouslySetInnerHTML' or even return as a React component on a html tag of your choice!",
   "main": "lib/index.js",
   "scripts": {
