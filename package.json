@@ -8,7 +8,7 @@
     "build": "npm install && npm run build:lib && npm run build:umd && cd demo && npm install && npm run build && cd ..",
     "build:lib": "rimraf lib && babel ./src -d lib",
     "build:umd": "webpack --config webpack.config.development.js",
-    "prerelease": "npm run clean",
+    "prerelease": "npm run clean && npm adduser",
     "release": "npm run build",
     "postrelease": "git push --follow-tags && npm publish",
     "release:patch": "npm version patch && npm run release",

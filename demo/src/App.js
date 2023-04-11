@@ -10,7 +10,7 @@ export default function App() {
 	const [ htmlString, setHtmlString ] = useState('Even with x<y <i>I am still <strong>Strong!</strong></i>');
 	
 	return <div id="app">
-		<h1 className="m-0">React Parse HTML String Demo!</h1>
+		<h1 className="m-0">React Parse HTML String v2.0.0  Demo!</h1>
 		<hr className="mt-2" />
 		<textarea
 			name="ta"
