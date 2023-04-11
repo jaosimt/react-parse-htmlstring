@@ -3,7 +3,7 @@
  */
 
 import ParseHTML from './ParseHTML';
-import { parseHTMLString } from './processor';
+import { parseHTMLString, isValidHTMLTag } from './processor';
 
 export default ParseHTML;
-export { parseHTMLString };
+export { parseHTMLString, isValidHTMLTag };
