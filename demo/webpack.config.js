@@ -12,7 +12,9 @@ module.exports = {
 	resolve: {
 		extensions: [
 			'.js',
-			'.jsx'
+			'.jsx',
+			'.json',
+			'.ts'
 		],
 		modules: [
 			'node_modules',
