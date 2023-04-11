@@ -1,5 +1,7 @@
 .idea
 .babelrc
 .eslintrc
+.DS_Store
+node_modules*
 tests.webpack.js
 webpack.config.*.js
