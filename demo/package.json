@@ -29,6 +29,6 @@
   "dependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-parse-htmlstring": "^2.1.1"
+    "react-parse-htmlstring": "^2.1.2"
   }
 }
