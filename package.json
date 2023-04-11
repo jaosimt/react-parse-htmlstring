@@ -1,6 +1,6 @@
 {
   "name": "react-parse-htmlstring",
-  "version": "2.1.6",
+  "version": "2.1.7",
   "description": "Parse any string and return a React component on a html container of your choice!",
   "repository": {
     "type": "git",
