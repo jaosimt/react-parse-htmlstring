@@ -10,7 +10,7 @@ export default function App() {
 	
 	return <div id="app">
 		<h1 className="m-0">React Parse HTML String Demo!</h1>
-		<h3 style={ { margin: 0 } }><strong>v2.1.1</strong></h3>
+		<h3 className="m-0"><strong>v2.1.1</strong></h3>
 		<hr className="mt-2" />
 		<textarea
 			name="ta"
