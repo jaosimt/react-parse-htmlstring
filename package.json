@@ -4,12 +4,13 @@
   "description": "Parse any string and return a React component on a html container of your choice!",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jaosimt/react-parse-htmlstring.git"
+    "url": "git+https://github.com/jaosimt/react-parse-htmlstring.git"
   },
   "bugs": {
     "url": "https://github.com/jaosimt/react-parse-htmlstring/issues"
   },
-  "homepage": "https://github.com/jaosimt/react-parse-htmlstring#readme",
+  "homepage": "https://jaosimt.github.io/react-parse-htmlstring",
+  
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf dist lib node_modules demo/dist demo/node_modules",
