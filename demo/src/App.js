@@ -9,7 +9,8 @@ export default function App() {
 	const [ htmlString, setHtmlString ] = useState('Even with x<y <i>I am still <strong>Strong!</strong></i>');
 	
 	return <div id="app">
-		<h1 className="m-0">React Parse HTML String <strong>v2.0.1</strong>  Demo!</h1>
+		<h1 className="m-0">React Parse HTML String Demo!</h1>
+		<h3 style={ { margin: 0 } }><strong>v2.1.1</strong></h3>
 		<hr className="mt-2" />
 		<textarea
 			name="ta"
@@ -49,6 +50,6 @@ export default function App() {
 		<br />
 		<hr />
 		<br />
-		<button onClick={() => setHtmlString(jaoSolutionSVGString)}>I Prepared an svg string, want to try loading it?</button>
+		<button onClick={ () => setHtmlString(jaoSolutionSVGString) }>I Prepared an svg string, want to try loading it?</button>
 	</div>;
 }
