@@ -1,6 +1,6 @@
 {
   "name": "react-parse-htmlstring",
-  "version": "2.2.2",
+  "version": "2.0.1",
   "description": "Parse any string and return a React component on a html container of your choice!",
   "main": "lib/index.js",
   "scripts": {
