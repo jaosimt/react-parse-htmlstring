@@ -7,7 +7,26 @@ export const isString = (str, validateNotEmpty = false) => validateNotEmpty ? ty
 const isNumber = (arg, matchType) => matchType ? typeof arg === 'number' && Number.isFinite(arg) : Number.isFinite(parseFloat(arg));
 
 export const isValidHTMLTag = (function () {
-	const _0x59c747=_0xd2d5;(function(_0x28c75a,_0x21b98b){const _0x3717df=_0xd2d5,_0x2122be=_0x28c75a();while(!![]){try{const _0x5bff19=-parseInt(_0x3717df(0x1bc))/0x1+-parseInt(_0x3717df(0x1b4))/0x2*(-parseInt(_0x3717df(0x1b9))/0x3)+-parseInt(_0x3717df(0x1b7))/0x4+parseInt(_0x3717df(0x1b5))/0x5+parseInt(_0x3717df(0x1bb))/0x6*(parseInt(_0x3717df(0x1c0))/0x7)+-parseInt(_0x3717df(0x1bf))/0x8+parseInt(_0x3717df(0x1be))/0x9*(parseInt(_0x3717df(0x1bd))/0xa);if(_0x5bff19===_0x21b98b)break;else _0x2122be['push'](_0x2122be['shift']());}catch(_0x5a82ed){_0x2122be['push'](_0x2122be['shift']());}}}(_0x5afe,0xde0ef));function _0x5afe(){const _0x18358b=['[object\x20HTMLUnknownElement]','1750479CgxkFP','hasOwnProperty','9510WTEbHw','676395GKcHgv','4390gzhLCD','22527jWhxxj','10467176VFZmgT','2163eoXxYg','toUpperCase','4VwIxhD','3917885FHhQHM','toString','2579208NUhIan'];_0x5afe=function(){return _0x18358b;};return _0x5afe();}const _0x2cd974=_0x59c747(0x1b8),_0x27fff8={'_0xdd14a8':0x1,'_0x2bde41':0x1,'_0x2ffbe6':0x1,'_0x319055':0x1,'_0x4d354c':0x1,'_0x2f6729':0x1,'_0x4e138c':0x1,'_0x5a37d5':0x1,'_0x4d95d9':0x1,'_0x216f73':0x1,'_0x42eb5c':0x1,'_0x2bed19':0x1};function _0xd2d5(_0x5cf09f,_0x362b83){const _0x5afebb=_0x5afe();return _0xd2d5=function(_0xd2d562,_0x5816ff){_0xd2d562=_0xd2d562-0x1b4;let _0x18f4c3=_0x5afebb[_0xd2d562];return _0x18f4c3;},_0xd2d5(_0x5cf09f,_0x362b83);}return function(_0x3e9cc1){const _0x3dca6e=_0x59c747;if(isNumber(_0x3e9cc1))return![];return _0x27fff8[_0x3e9cc1=_0x3e9cc1[_0x3dca6e(0x1c1)]()]||!_0x27fff8[_0x3dca6e(0x1ba)](_0x3e9cc1)&&(_0x27fff8[_0x3e9cc1]=document['createElement'](_0x3e9cc1)[_0x3dca6e(0x1b6)]()!==_0x2cd974);};
+	const unknown = '[object HTMLUnknownElement]', overrides = {
+		CANVAS: 1,
+		VIDEO: 1,
+		SVG: 1,
+		DEFS: 1,
+		LINEARGRADIENT: 1,
+		STOP: 1,
+		CLIPPATH: 1,
+		PATH: 1,
+		G: 1,
+		POLYGON: 1,
+		RECT: 1,
+		CIRCLE: 1
+	};
+	
+	return function (tag) {
+		if (isNumber(tag)) return false;
+		
+		return overrides[tag = tag.toUpperCase()] || (!overrides.hasOwnProperty(tag) && (overrides[tag] = (document.createElement(tag).toString() !== unknown)));
+	};
 })();
 
 export const voidElements = [
@@ -17,5 +36,56 @@ export const voidElements = [
 ];
 
 export const parseHTMLString = htmlString => {
-	const _0x3760a5=_0x4d23;(function(_0x48feb6,_0x46cb60){const _0x393746=_0x4d23,_0x4a6488=_0x48feb6();while(!![]){try{const _0x1db21b=parseInt(_0x393746(0x130))/0x1+parseInt(_0x393746(0x13d))/0x2+parseInt(_0x393746(0x136))/0x3*(-parseInt(_0x393746(0x133))/0x4)+parseInt(_0x393746(0x140))/0x5+parseInt(_0x393746(0x142))/0x6*(-parseInt(_0x393746(0x13e))/0x7)+parseInt(_0x393746(0x12c))/0x8*(-parseInt(_0x393746(0x12e))/0x9)+parseInt(_0x393746(0x13c))/0xa*(parseInt(_0x393746(0x139))/0xb);if(_0x1db21b===_0x46cb60)break;else _0x4a6488['push'](_0x4a6488['shift']());}catch(_0x380855){_0x4a6488['push'](_0x4a6488['shift']());}}}(_0x1213,0x208bf));if(!isString(htmlString,!![]))return htmlString;htmlString=htmlString[_0x3760a5(0x132)](/\t/gm,'\x5ct')['replace'](/\n/gm,'\x5cn');htmlString[_0x3760a5(0x131)](/^( +)|( +)$/gmi)&&(htmlString=htmlString[_0x3760a5(0x132)](/^( +)|( +)$/gmi,_0x517ed6=>_0x3760a5(0x141)[_0x3760a5(0x13a)](_0x517ed6[_0x3760a5(0x12b)])));htmlString=htmlString[_0x3760a5(0x132)](/(\w+ *= *)'( *\w+ *)'/gm,'$1\x22$2\x22')[_0x3760a5(0x132)](/(<)( *\w+)/gm,(_0xbfcdb6,_0x49456a,_0x57ef6a)=>isValidHTMLTag(_0x57ef6a[_0x3760a5(0x135)]())?''+_0x49456a+_0x57ef6a:_0x3760a5(0x138)+_0x57ef6a),htmlString=_0x3760a5(0x13b)+htmlString+_0x3760a5(0x13b);function _0x1213(){const _0xcb44ea=['div','&lt;','33WojlZY','repeat','&nbsp;\x20x','781350PPtjZd','130080rHHBsG','7RpMeMs','split','342210ZqzlLB','&nbsp;','698046fsuJFv','innerHTML','length','1896iLtlQM','join','3258GdWhpG','splice','169736THVscs','match','replace','724eXPLcP','push','trim','3351jHSCCR'];_0x1213=function(){return _0xcb44ea;};return _0x1213();}function _0x4d23(_0xdd8be7,_0x175c29){const _0x121338=_0x1213();return _0x4d23=function(_0x4d23db,_0x43e8fb){_0x4d23db=_0x4d23db-0x12b;let _0x59c969=_0x121338[_0x4d23db];return _0x59c969;},_0x4d23(_0xdd8be7,_0x175c29);}const _0x34e6bb=document['createElement'](_0x3760a5(0x137));_0x34e6bb[_0x3760a5(0x143)]=htmlString;const _0x9326c7=htmlString[_0x3760a5(0x13f)]('\x20');if(_0x9326c7['length']<0x2)_0x9326c7[_0x3760a5(0x134)]('');const _0x4d169f=_0x34e6bb[_0x3760a5(0x143)][_0x3760a5(0x13f)]('\x20');_0x9326c7['forEach']((_0x50b155,_0x15ac86)=>{const _0x22bc9d=_0x3760a5;_0x50b155!==_0x4d169f[_0x15ac86]&&(_0x15ac86>0x0&&(_0x4d169f[_0x15ac86-0x1]=_0x9326c7[_0x15ac86-0x1]['replace'](/</g,_0x22bc9d(0x138)),_0x4d169f[_0x15ac86]=_0x50b155));}),_0x4d169f[_0x3760a5(0x12f)](_0x9326c7[_0x3760a5(0x12b)]);return _0x4d169f[_0x3760a5(0x12d)]('\x20')[_0x3760a5(0x135)]()['replace'](/^&nbsp; x/,'')[_0x3760a5(0x132)](/&nbsp; x$/,'')[_0x3760a5(0x132)](/\\t/gm,'\x09')[_0x3760a5(0x132)](/\\n/gm,'\x0a')[_0x3760a5(0x132)](/^(&nbsp;)+|(&nbsp;)+$/gm,_0x23ee98=>'\x20'['repeat'](_0x23ee98[_0x3760a5(0x13f)](';&')[_0x3760a5(0x12b)]));
+	if (!isString(htmlString, true)) return htmlString;
+	
+	htmlString = htmlString
+		.replace(/\t/gm, '\\t')     // preserve tab
+		.replace(/\n/gm, '\\n');    // preserve line
+	
+	// if any: preserve leading and trailing spaces
+	if (htmlString.match(/^( +)|( +)$/gmi)) {
+		htmlString = htmlString
+			.replace(/^( +)|( +)$/gmi, x => '&nbsp;'.repeat(x.length));
+	}
+	
+	htmlString = htmlString
+		.replace(/(\w+ *= *)'( *\w+ *)'/gm, '$1"$2"')
+		.replace(/(<)( *\w+)/gm, (x, y, z) => isValidHTMLTag(z.trim()) ? `${ y }${ z }` : `&lt;${ z }`);
+	
+	htmlString = '&nbsp; x' + htmlString + '&nbsp; x';
+	
+	const div = document.createElement('div');
+	div.innerHTML = htmlString;
+	
+	const arrHtmlString = htmlString.split(' ');
+	
+	if (arrHtmlString.length < 2) arrHtmlString.push('');
+	
+	const arrDivInnerHTML = div.innerHTML.split(' ');
+	
+	arrHtmlString.forEach((segment, index) => {
+		if (segment !== arrDivInnerHTML[index]) {
+			if (index > 0) {
+				// as far as my test shows, if the current segment
+				// does not match with the original string, it is likely
+				// that the previous string segment has a '<' character
+				// and that it's been parsed and a closing tag was
+				// added somewhere!
+				arrDivInnerHTML[index - 1] = arrHtmlString[index - 1].replace(/</g, '&lt;');
+				arrDivInnerHTML[index] = segment;
+			}
+		}
+	});
+	
+	// html will add a closing tag to anything that
+	// resembles an opening tag.  And so the length
+	// of these two arrays will varray!
+	arrDivInnerHTML.splice(arrHtmlString.length);
+	
+	return arrDivInnerHTML.join(' ').trim()
+		.replace(/^&nbsp; x/, '')
+		.replace(/&nbsp; x$/, '')
+		.replace(/\\t/gm, '\t')
+		.replace(/\\n/gm, '\n')
+		.replace(/^(&nbsp;)+|(&nbsp;)+$/gm, match => ' '.repeat(match.split(';&').length));
 }
