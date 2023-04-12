@@ -98,7 +98,7 @@ button {
 	border-radius : var(--default-border-radius);
 	border        : var(--default-border);
 	display       : inline-flex;
-	//	white-space   : pre;
+	white-space   : pre-wrap;
 }
 
 .markdown {
