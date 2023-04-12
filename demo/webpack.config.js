@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-	mode: 'development',
+	mode: 'production',
 	entry: path.join(__dirname, 'src', 'index.js'),
 	output: {
 		path: path.join(__dirname, 'dist'),
@@ -33,8 +33,14 @@ module.exports = {
 			{
 				test: /\.(scss|css)$/,
 				use: [ MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader' ]
-			}
+			},
 		]
 	},
-	plugins: [ new HtmlWebpackPlugin({ template: './src/index.html' }), new MiniCssExtractPlugin() ]
+	performance: { 
+		hints: false 
+	},
+	plugins: [ 
+		new HtmlWebpackPlugin({ template: './src/index.html' }), 
+		new MiniCssExtractPlugin()
+	]
 };

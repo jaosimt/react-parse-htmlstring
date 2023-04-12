@@ -13,7 +13,7 @@ const ParseHTML = props => {
 	
 	return createElement(tag, {
 		className: classname('parse-htmlstring', className),
-		style: { whiteSpace: 'pre', ...style },
+		style: { ...style },
 		dangerouslySetInnerHTML: { __html: parseHTMLString(string) }
 	});
 };

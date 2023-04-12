@@ -98,7 +98,7 @@ button {
 	border-radius : var(--default-border-radius);
 	border        : var(--default-border);
 	display       : inline-flex;
-	white-space   : pre;
+	//	white-space   : pre;
 }
 
 .markdown {
@@ -121,6 +121,11 @@ button {
 		padding    : var(--default-padding);
 		background : var(--bg-gray);
 		text-align : center;
+		overflow   : hidden;
+		
+		> * { max-width : calc(100% - calc(var(--default-padding) * 2)); }
+		
+		> .demo { text-align : initial; }
 	}
 }
 

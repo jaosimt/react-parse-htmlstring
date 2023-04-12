@@ -32,57 +32,59 @@ export default function App() {
 					{ htmlString === defaultHtmlString ? 'I prepared a svg string, want to try loading it?' : 'Reset' }
 				</button>
 				<hr className="mt-1 mb-1" style={ { border: '1px solid whitesmoke' } } />
-				<div className="markdown-wrapper">
-					<h3 className="header">
-						component&nbsp;
-						<span className="token punctuation">&lt;</span>
-						<span className="token tag">ParseHTML&nbsp;</span>
-						<span className="token punctuation">/&gt;</span>
-					</h3>
-					<div className="markdown">
-						<span className="token punctuation">&lt;</span>
-						<span className="token tag">ParseHTML&nbsp;</span>
-						<span className="token attribute name">string</span>
-						<span className="token punctuation">=&#123;&nbsp;</span>
-						<span className="token attribute value">htmlString</span>
-						<span className="token punctuation">&nbsp;&#125;</span>
-						<span className="token attribute name">&nbsp;className</span>
-						<span className="token punctuation">="</span>
-						{ _className }
-						<span className="token punctuation">&nbsp;/&gt;</span>
+				<div>
+					<div className="markdown-wrapper">
+						<h3 className="header">
+							component&nbsp;
+							<span className="token punctuation">&lt;</span>
+							<span className="token tag">ParseHTML&nbsp;</span>
+							<span className="token punctuation">/&gt;</span>
+						</h3>
+						<div className="markdown">
+							<span className="token punctuation">&lt;</span>
+							<span className="token tag">ParseHTML&nbsp;</span>
+							<span className="token attribute name">string</span>
+							<span className="token punctuation">=&#123;&nbsp;</span>
+							<span className="token attribute value">htmlString</span>
+							<span className="token punctuation">&nbsp;&#125;</span>
+							<span className="token attribute name">&nbsp;className</span>
+							<span className="token punctuation">="</span>
+							{ _className }
+							<span className="token punctuation">&nbsp;/&gt;</span>
+						</div>
+						<div className="content">
+							<ParseHTML string={ htmlString } className="demo" />
+						</div>
 					</div>
-					<div className="content">
-						<ParseHTML string={ htmlString } className="demo" />
-					</div>
-				</div>
-				<br/>
-				<div className="markdown-wrapper">
-					<h3 className="header">
-						function&nbsp;
-						<span className="token method">parseHTMLString</span>
-						<span className="token punctuation">(</span>
-						<span className="token punctuation">)</span>
-					</h3>
-					<div className="markdown">
-						<span className="token punctuation">&lt;</span>
-						<span className="token tag">div&nbsp;</span>
-						<span className="token attribute name">className</span>
-						<span className="token punctuation">=&#123;&nbsp;</span>
-						{ _className }
-						<span className="token punctuation">&nbsp;&#125;</span>
-						<span className="token attribute name">&nbsp;dangerouslySetInnerHTML</span>
-						<span className="token punctuation">=&#123;&nbsp;&#123;&nbsp;</span>
-						<span className="token attribute value">__html</span>
-						<span className="token punctuation">:&nbsp;</span>
-						<span className="token method">parseHTMLString</span>
-						<span className="token punctuation">(</span>
-						<span className="token attribute value">htmlString</span>
-						<span className="token punctuation">)</span>
-						<span className="token punctuation">&nbsp;&#125;&nbsp;&#125;&nbsp;</span>
-						<span className="token punctuation">&nbsp;/&gt;</span>
-					</div>
-					<div className="content">
-						<div className="demo" dangerouslySetInnerHTML={ { __html: parseHTMLString(htmlString) } } />
+					<br/>
+					<div className="markdown-wrapper">
+						<h3 className="header">
+							function&nbsp;
+							<span className="token method">parseHTMLString</span>
+							<span className="token punctuation">(</span>
+							<span className="token punctuation">)</span>
+						</h3>
+						<div className="markdown">
+							<span className="token punctuation">&lt;</span>
+							<span className="token tag">div&nbsp;</span>
+							<span className="token attribute name">className</span>
+							<span className="token punctuation">=&#123;&nbsp;</span>
+							{ _className }
+							<span className="token punctuation">&nbsp;&#125;</span>
+							<span className="token attribute name">&nbsp;dangerouslySetInnerHTML</span>
+							<span className="token punctuation">=&#123;&nbsp;&#123;&nbsp;</span>
+							<span className="token attribute value">__html</span>
+							<span className="token punctuation">:&nbsp;</span>
+							<span className="token method">parseHTMLString</span>
+							<span className="token punctuation">(</span>
+							<span className="token attribute value">htmlString</span>
+							<span className="token punctuation">)</span>
+							<span className="token punctuation">&nbsp;&#125;&nbsp;&#125;&nbsp;</span>
+							<span className="token punctuation">&nbsp;/&gt;</span>
+						</div>
+						<div className="content">
+							<div className="demo" dangerouslySetInnerHTML={ { __html: parseHTMLString(htmlString) } } />
+						</div>
 					</div>
 				</div>
 			</div>
