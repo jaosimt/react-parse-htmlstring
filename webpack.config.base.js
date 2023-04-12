@@ -27,8 +27,7 @@ module.exports = {
 		extensions: [
 			'.js',
 			'.jsx',
-			'.json',
-			'.ts'
+			'.json'
 		],
 		modules: [
 			'node_modules',
@@ -38,7 +37,7 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.(ts|js|jsx)$/,
+				test: /\.(js|jsx)$/,
 				include: path.resolve(__dirname, 'src'),
 				exclude: /node_modules/,
 				use: 'babel-loader'

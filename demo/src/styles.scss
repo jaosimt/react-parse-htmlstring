@@ -1,36 +1,154 @@
-body {
-	padding: 1rem;
+:root {
+	--primary-color         : #2b6cb0;
+	--text-color            : rgba(74, 85, 104, 1);
+	--bg-dark               : rgba(45, 55, 72, 1);
+	--bg-gray               : rgba(45, 55, 72, 0.1);
+	--bg-white              : rgba(255, 255, 255, 1);
 	
-	#app {
-		h1, h3 { color: green; }
-	}
+	--default-padding       : 1rem;
+	--default-border        : 1px solid rgba(160, 174, 192, 1);
+	--default-border-radius : 3px;
 	
-	font-family: "JetBrains Mono", "Courier New", sans-serif;
+	--color-code-green      : #b5f4a5;
+	--color-code-yellow     : #ffe484;
+	--color-code-purple     : #d9a9ff;
+	--color-code-red        : #ff8383;
+	--color-code-blue       : #93ddfd;
+	--color-code-white      : #fff;
+	--color-code-gold       : #d4a500;
+	--color-code-gray       : rgba(160, 174, 192, 1);
 }
 
-.p-1 { padding: 0.5rem !important; }
+body {
+	padding     : 1rem;
+	color       : var(--text-color);
+	
+	#react-parse-htmlstring {}
+	
+	font-family : "JetBrains Mono", "Courier New", sans-serif;
+}
 
-.m-0 { margin: 0 !important; }
-.mt-1 { margin-top: 1rem !important; }
-.mt-2 { margin-top: 2rem !important; }
+.grid-container {
+	display               : grid;
+	gap                   : 2rem;
+	grid-template-columns : auto max-content;
+	//	grid-template-columns: 100%;
+}
 
-textarea { 
-	padding: 0.5rem;
-	width: calc(100% - 1rem); 
+.grid-item {
+	> textarea {
+		height : calc(100% - 2rem);
+		//		 min-height: 200px;
+	}
+}
+
+.p-1 { padding : 0.5rem !important; }
+
+.m-0 { margin : 0 !important; }
+
+.mt-0 { margin-top : 0 !important; }
+
+.mt-1 { margin-top : 1rem !important; }
+
+.mt-2 { margin-top : 2rem !important; }
+
+.mb-0 { margin-bottom : 0 !important; }
+
+.mb-1 { margin-bottom : 1rem !important; }
+
+.mb-2 { margin-bottom : 2rem !important; }
+
+textarea {
+	padding       : var(--default-padding);
+	border        : var(--default-border);
+	border-radius : var(--default-border-radius);
+	width         : calc(100% - 1rem);
+	outline       : 0;
+	
+	&:hover {
+		border : 1px solid var(--primary-color);
+		
+		&:focus {
+			border : 1px solid var(--primary-color);
+		}
+	}
 }
 
 button {
-	background-color: green;
-	color: white;
-	padding: 0.5rem;
-	border-radius: 5px;
-	border: 1px solid gainsboro;
-	cursor: pointer;
+	color            : #fff;
+	background-color : var(--primary-color);
+	opacity          : 0.7;
+	font-size        : 0.9rem;
+	font-weight      : 700;
+	padding          : 1rem 1.5rem;
+	border-radius    : var(--default-border-radius);
+	border           : 1px solid var(--primary-color);
+	cursor           : pointer;
+	transition       : all ease-in-out 100ms;
+	
+	&:hover {
+		opacity : 1;
+		
+		&:focus {
+			opacity : 0.7;
+		}
+	}
 }
 
 .demo {
-	padding: 1rem;
-	border-radius: 3px;
-	border: 1px solid gainsboro;
-	display: inline-flex;
+	background    : var(--bg-white);
+	padding       : var(--default-padding);
+	border-radius : var(--default-border-radius);
+	border        : var(--default-border);
+	display       : inline-flex;
+	white-space   : pre;
+}
+
+.markdown {
+	background-color : var(--bg-dark);
+	color            : var(--color-code-white);
+	font-family      : "JetBrains Mono", "Courier New", sans-serif;
+	padding          : var(--default-padding);
+}
+
+.markdown-wrapper {
+	border        : 1px solid var(--color-code-gray);
+	border-radius : var(--default-border-radius);
+	
+	> .header {
+		padding : var(--default-padding);
+		margin  : 0;
+	}
+	
+	> .content {
+		padding    : var(--default-padding);
+		background : var(--bg-gray);
+		text-align : center;
+	}
+}
+
+.token {
+	font-weight : 700;
+	color       : var(--color-code-white);
+	
+	&.rule { color : var(--color-code-purple); }
+	
+	&.comment { color : var(--color-code-gray); }
+	
+	&.punctuation { color : var(--color-code-blue); }
+	
+	&.tag { color : var(--color-code-red); }
+	
+	&.method { color : var(--color-code-gold); }
+	
+	&.attribute {
+		&.name { color : var(--color-code-yellow); }
+		
+		&.value { color : var(--color-code-green); }
+	}
+}
+
+.tooltip-override {
+	color      : var(--color-code-white);
+	background : var(--color-code-purple);
 }
