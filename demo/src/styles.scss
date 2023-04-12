@@ -31,15 +31,12 @@ body {
 .grid-container {
 	display               : grid;
 	gap                   : 2rem;
-	grid-template-columns : auto max-content;
-	//	grid-template-columns: 100%;
+	// grid-template-columns : auto max-content;
+	grid-template-columns : 100%;
 }
 
 .grid-item {
-	> textarea {
-		height : calc(100% - 2rem);
-		//		 min-height: 200px;
-	}
+	> textarea { min-height : 200px; }
 }
 
 .p-1 { padding : 0.5rem !important; }
@@ -62,7 +59,7 @@ textarea {
 	padding       : var(--default-padding);
 	border        : var(--default-border);
 	border-radius : var(--default-border-radius);
-	width         : calc(100% - 1rem);
+	width         : calc(100% - 2rem);
 	outline       : 0;
 	
 	&:hover {
@@ -150,5 +147,5 @@ button {
 
 .tooltip-override {
 	color      : var(--color-code-white);
-	background : #93C4D1;
+	background : #93c4d1;
 }
