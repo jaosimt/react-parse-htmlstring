@@ -71,9 +71,13 @@ are declared and initialized, write a solution that if x<y returns max = x!
 ```
 or something like that...
 
+<br/>
+
 > <div style="border-bottom: 1px solid #777; padding: 0 0 0.5rem 0; margin-bottom: 0.5rem"><i><strong>Note:</strong></i></div>
 > For any undesired rendering/result, please do file an issue right here  <a href="https://github.com/jaosimt/react-parse-htmlstring/issues">here!</a>.<br/>
 > Surely, I will jump on it as soon as I can!
 
-<h5 style="text-align: center; margin-top: 2rem;">Powered by:</h5>
-![alt text](https://pos.jaosimt.com/sImoLogo-full-red.svg)
+<h5 style="text-align: center; margin-top: 3rem;">Powered by:</h5>
+<div style="text-align: center">
+  <img style="width: 147px; max-width: 98%" src="https://pos.jaosimt.com/sImoLogo-full-red.svg" alt="sImo" />
+</div>
