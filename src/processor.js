@@ -35,8 +35,18 @@ export const voidElements = [
 	'track', 'wbr'
 ];
 
-export const parseHTMLString = htmlString => {
+export const parseHTMLString = (htmlString, options = {}) => {
 	if (!isString(htmlString, true)) return htmlString;
+	
+	const { plainInsert } = options;
+	
+	const div = document.createElement('div');
+	
+	if (plainInsert) {
+		// watch out! this could be very unreliable!!!
+		div.innerHTML = htmlString;
+		return div.innerHTML;
+	}
 	
 	htmlString = htmlString
 		.replace(/\t/gm, '\\t')     // preserve tab
@@ -54,7 +64,6 @@ export const parseHTMLString = htmlString => {
 	
 	htmlString = '&nbsp; x' + htmlString + '&nbsp; x';
 	
-	const div = document.createElement('div');
 	div.innerHTML = htmlString;
 	
 	const arrHtmlString = htmlString.split(' ');
