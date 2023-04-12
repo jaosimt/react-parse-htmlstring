@@ -30,7 +30,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-parse-htmlstring": "^2.1.16",
+    "react-parse-htmlstring": "^2.1.17",
     "react-tooltip": "^5.11.1"
   }
 }
