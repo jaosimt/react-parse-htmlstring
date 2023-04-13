@@ -9,7 +9,6 @@
   "bugs": {
     "url": "https://github.com/jaosimt/react-parse-htmlstring/issues"
   },
-  "readme": "README.md",
   "homepage": "https://jaosimt.github.io/react-parse-htmlstring",
   "main": "lib/index.js",
   "scripts": {
