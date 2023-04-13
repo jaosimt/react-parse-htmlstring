@@ -98,7 +98,7 @@ import { parseHTMLString } from 'react-parse-htmlstring';
   <img class="simo-full" src="https://pos.jaosimt.com/sImoLogo-full-red.svg" alt="sImo" />
 </section>
 
-<svg fill="none" style="opacity: 0; height: 0" viewBox="0 0 800 400" width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" style="opacity: 0; height: 0; overflow: hidden" viewBox="0 0 800 400" width="800" height="400" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>

@@ -15,8 +15,7 @@
     "LICENSE.md",
     "src/",
     "lib/",
-    "dist/",
-    "demo/"
+    "dist/"
   ],
   "main": "lib/index.js",
   "scripts": {
