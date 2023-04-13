@@ -10,6 +10,14 @@
     "url": "https://github.com/jaosimt/react-parse-htmlstring/issues"
   },
   "homepage": "https://jaosimt.github.io/react-parse-htmlstring",
+  "files": [
+    "README.md",
+    "LICENSE.md",
+    "src/",
+    "lib/",
+    "dist/",
+    "demo/"
+  ],
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf dist lib node_modules demo/dist demo/node_modules",
