@@ -96,7 +96,7 @@ import { parseHTMLString } from 'react-parse-htmlstring';
   <img class="simo-full" src="https://pos.jaosimt.com/sImoLogo-full-red.svg" alt="sImo" />
 </section>
 
-<aside>
+<div>
 	<style>
 	  :root {
 	      --primary-color         : #2b6cb0;
@@ -193,4 +193,4 @@ import { parseHTMLString } from 'react-parse-htmlstring';
 	  .token.attribute.name { color : var(--color-code-yellow); }
 	  .token.attribute.value { color : var(--color-code-green); }
 	</style>
-</aside>
+</div>
