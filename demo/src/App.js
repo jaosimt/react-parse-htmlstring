@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import ParseHTML, { parseHTMLString } from 'react-parse-htmlstring';
 import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
+
+// import ParseHTML, { parseHTMLString } from 'react-parse-htmlstring';
+import ParseHTML, { parseHTMLString } from '../../src'; // FOR DEBUGGING PURPOSES ONLY
 
 import './styles.scss';
 
@@ -98,7 +100,7 @@ export default function App() {
 					'    padding       : var(--default-padding);\n' +
 					'    border-radius : var(--default-border-radius);\n' +
 					'    border        : var(--default-border);\n' +
-					'    display       : inline-flex;\n' +
+					'    display       : inline-block;\n' +
 					'    white-space   : pre;\n' +
 					'}'
 				}
