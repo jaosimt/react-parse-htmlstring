@@ -16,11 +16,3 @@ const server = new WebpackDevServer({
 	await server.start();
 	console.log(`Dev server is listening on port ${port}`);
 })();
-
-// .listen(3000, 'localhost', function (err, result) {
-// 	if (err) {
-// 		console.log(err);
-// 	}
-//	
-// 	console.log('Listening at localhost:3000');
-// });

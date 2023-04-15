@@ -2,6 +2,8 @@
  *   Copyright © 2023 • Jao Solutions, Inc. • All rights reserved.
  */
 
+"use strict";
+
 import { createElement } from 'react';
 import classname from 'classnames';
 
