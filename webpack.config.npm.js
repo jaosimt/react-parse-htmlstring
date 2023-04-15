@@ -4,17 +4,14 @@ let config = require('./webpack.config.base');
 config = Object.create(config);
 
 config.mode = 'production';
-config.entry = path.join(__dirname, 'src', 'index');
-config.experiments = {
-	outputModule: true,
+config.entry = {
+	index: path.join(__dirname, 'src', 'index.js'),
+	ParseHTML: path.join(__dirname, 'src', 'ParseHTML.js'),
+	processor: path.join(__dirname, 'src', 'processor.js'),
 };
 config.output = {
-	library: {
-		type: 'module'
-	},
-	clean: true,
 	path: path.resolve(__dirname, 'dist'),
-	filename: 'index.js'
+	filename: '[name].js'
 };
 config.externals = {
 	'react': 'React'

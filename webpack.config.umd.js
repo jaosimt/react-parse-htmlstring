@@ -4,6 +4,7 @@ const path = require('path');
 config = Object.create(config);
 
 config.mode = 'production';
+config.entry = path.join(__dirname, 'src', 'index');
 config.output = {
 	library: {
 		type: 'umd',

@@ -16,12 +16,11 @@
     "lib/",
     "dist/"
   ],
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "clean": "rimraf dist lib node_modules demo/dist demo/node_modules",
-    "build": "npm install && npm run build:dist && npm run build:umd && cd demo && npm install && npm run build && cd ..",
-    "build:dist": "webpack --config webpack.config.dist.js",
-    "build:umd": "webpack --config webpack.config.umd.js",
+    "build": "npm install && npm run build:umd && cd demo && npm install && npm run build && cd ..",
+    "build:umd": "rimraf dist && babel ./src -d dist && webpack --config webpack.config.umd.js",
     "prerelease": "npm run clean && npm adduser",
     "release": "npm run build",
     "postrelease": "git push --follow-tags && npm publish && cd demo && npm install react-parse-htmlstring@latest && cd .. && npm run demo:publish",

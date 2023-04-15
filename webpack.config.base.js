@@ -2,12 +2,24 @@ const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
-	entry: path.join(__dirname, 'src', 'index.js'),
 	optimization: {
 		minimize: true,
 		minimizer: [
 			new TerserPlugin({
-				extractComments: "all",
+				test: /dist\/\w+\.js/i,
+				minify: TerserPlugin.uglifyJsMinify,
+				terserOptions: {
+					format: {
+						comments: false,
+					},
+					mangle: {
+						toplevel: false,
+						keep_fargs: true,
+						keep_quoted: true,
+						reserved: [ 'require', 'import', 'export', 'parseHTMLString', 'ParseHTML' ]
+					},
+				},
+				extractComments: false,
 			}),
 		],
 	},
