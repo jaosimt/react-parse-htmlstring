@@ -1,7 +1,10 @@
-.idea
+.git*
+.idea*
+demo*
+node_modules*
+src*
 .babelrc
 .eslintrc
+package*
+webpack*
 .DS_Store
-node_modules*
-tests.webpack.js
-webpack.config.*.js
