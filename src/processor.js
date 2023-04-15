@@ -46,6 +46,17 @@ export const parseHTMLString = (htmlString, options = {}) => {
 	}
 	
 	/*
+		FOR A PASTED HTML STRING ESPECIALLY A SVG HTML STRING,
+		SOME TAG COULD BE WRITTEN "SELF-CLOSING" 
+		1ST ISSUE: SELF-CLOSING TAGS WITH SPACE BEFORE IT [' />'] HAS UNDESIRED BEHAVIOR
+		2ND ISSUE: HTML WILL RENDER IT WITH A "CLOSING TAG" INSTEAD
+		
+		LETS SOLVE THE FIRST AND ALLOW BELOW CHECKING FOR THE SECOND, AFTER ALL, IT COULD BE
+		HARD TO KNOW WHICH TAG WILL BE RE-WRITTEN WITH A CLOSING TAG!
+	*/
+	htmlString = htmlString.replace(/ \/>/gm, '/>');
+	
+	/*
 		FOR A CODE BLOCK, 
 		IT IS NECESSARY TO PRESERVE TABS AND RETURNS
 	*/
@@ -87,12 +98,15 @@ export const parseHTMLString = (htmlString, options = {}) => {
 	arrHtmlString.forEach((segment, index) => {
 		if (segment !== arrDivInnerHTML[index]) {
 			if (index > 0) {
-				// as far as my test shows, if the current segment
-				// does not match with the original string, it is likely
-				// that the previous string segment has a '<' character
-				// and that it's been parsed but is not valid
-				arrDivInnerHTML[index - 1] = arrHtmlString[index - 1].replace(/</g, '&lt;');
-				arrDivInnerHTML[index] = segment;
+				const addedClosingTag = segment.match(/\/>/) && arrDivInnerHTML[index].match(/[^/]><\/\w+>/);
+				if (!addedClosingTag) {
+					// as far as my test shows, if the current segment
+					// does not match with the original string, it is likely
+					// that the previous string segment has a '<' character
+					// and that it's been parsed but is not valid
+					arrDivInnerHTML[index - 1] = arrHtmlString[index - 1].replace(/</g, '&lt;');
+					arrDivInnerHTML[index] = segment;
+				}
 			}
 		}
 	});
