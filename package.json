@@ -21,7 +21,7 @@
   "scripts": {
     "clean": "rimraf dist lib node_modules demo/dist demo/node_modules",
     "build": "npm install && npm run build:production && cd demo && npm install && npm run build && cd ..",
-    "build:production": "webpack --config webpack.config.production.js && rimraf dist && babel ./src --out-dir ./dist --copy-files",
+    "build:production": "webpack --config webpack.config.production.js && rimraf dist && babel ./src --out-dir ./dist --copy-files --no-comments --compact --ignore 'src/index.js'",
     "prerelease": "npm run clean && npm adduser",
     "release": "npm run build",
     "postrelease": "git push --follow-tags && npm publish && cd demo && npm install react-parse-htmlstring@latest && cd .. && npm run demo:publish",
