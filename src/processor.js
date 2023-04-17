@@ -34,7 +34,7 @@ export const parseHTMLString = (htmlString, options = {}) => {
 	const re=new RegExp(`( ${eventAttrs.join('| ')})=[\'\"\`].*?[\'\"\`]([ \\/]*>| \\w+[-\\w+]*)`, 'igm');
 	htmlString = htmlString.replace(re, '$2');
 	
-	const { plainInsert, trim = true } = options,
+	const { plainInsert, trim = false } = options,
 		div = document.createElement('div');
 	
 	if (plainInsert) {
