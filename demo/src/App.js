@@ -2,11 +2,10 @@ import React, { useState } from 'react';
 import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
 
-// import ParseHTML, { parseHTMLString } from 'react-parse-htmlstring';
+import ParseHTML, { parseHTMLString } from 'react-parse-htmlstring';
 
 /* FOR DEBUGGING PURPOSES ONLY */
 // import ParseHTML, { parseHTMLString  } from '../../src/index'; 
-import ParseHTML, { parseHTMLString } from '../../dist/index';
 
 import './styles.scss';
 

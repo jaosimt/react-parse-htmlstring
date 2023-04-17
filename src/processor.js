@@ -30,9 +30,9 @@ export const isValidHTMLTag = (function () {
 export const parseHTMLString = (htmlString, options = {}) => {
 	if (!isString(htmlString, true)) return htmlString;
 	
-	/*
-		THERE'S NO WAY THAT WE'RE 
-	*/
+	/* THERE'S NO WAY THAT WE'RE NEEDING EVENTS IN HERE! NOT IN A MILLION YEARS! */
+	const re=new RegExp(`( ${eventAttrs.join('| ')})=[\'\"\`].*?[\'\"\`]([ \\/]*>| \\w+[-\\w+]*)`, 'igm');
+	htmlString = htmlString.replace(re, '$2');
 	
 	const { plainInsert, trim = true } = options,
 		div = document.createElement('div');
