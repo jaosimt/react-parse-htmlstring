@@ -12,7 +12,7 @@
   "homepage": "https://jaosimt.github.io/react-parse-htmlstring",
   "files": [
     "dist/",
-    "lib/",
+    "lib/react-parse-htmlstring.js",
     "LICENSE.md",
     "package.json",
     "README.md"
