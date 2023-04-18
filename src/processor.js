@@ -27,6 +27,8 @@ export const isValidHTMLTag = (function () {
 	};
 })();
 
+export const fixAttributeQuotes = htmlString => htmlString.replace(/(\w+ *= *)(\\"|\\'|\\`|"|'|`)*(( *\w+ *)*)(\\"|\\'|\\`|"|'|`)*/gm, '$1"$3"');
+
 export const parseHTMLString = (htmlString, options = {}) => {
 	if (!isString(htmlString, true)) return htmlString;
 	
@@ -34,7 +36,7 @@ export const parseHTMLString = (htmlString, options = {}) => {
 	const re=new RegExp(`( ${eventAttrs.join('| ')})=['"\`].*?['"\`]([ \\/]*>| \\w+[-\\w+]*)`, 'igm');
 	htmlString = htmlString.replace(re, '$2');
 	
-	const { plainInsert, trim = false, normalizeQuotationMarks = false } = options,
+	const { plainInsert, trim = false } = options,
 		div = document.createElement('div');
 	
 	if (plainInsert) {
@@ -69,10 +71,8 @@ export const parseHTMLString = (htmlString, options = {}) => {
 			.replace(/^( +)|( +)$/gmi, x => '[ SPACE ]'.repeat(x.length));
 	}
 	
-	if (normalizeQuotationMarks) {
-		// NORMALIZE QUOTATION MARKS
-		htmlString = htmlString.replace(/(\w+ *= *)(\\"|\\'|\\`|"|'|`)*(( *\w+ *)*)(\\"|\\'|\\`|"|'|`)*/gm, '$1"$3"');
-	}
+	// NORMALIZE QUOTATION MARKS
+	htmlString = htmlString.replace(/(\w+ *= *)(\\"|\\'|\\`|"|'|`)(( *\w+ *)*)(\\"|\\'|\\`|"|'|`)/gm, '$1"$3"');
 	
 	// LOCATE AND REPLACE < WITH HTML ENTITY ALL NON-CLOSED TAG LIKE EXPRESSION
 	htmlString = htmlString.replace(/<(\w+)(?![^<]*>)/gm, '&lt;$1');
