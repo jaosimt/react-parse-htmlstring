@@ -70,7 +70,7 @@ export const parseHTMLString = (htmlString, options = {}) => {
 	}
 	
 	// NORMALIZE QUOTATION MARKS
-	htmlString = htmlString.replace(/(\w+ *= *)(\\"|\\'|\\`|"|'|`)*( *\w+ *)(\\"|\\'|\\`|"|'|`)*/gm, '$1"$3"');
+	htmlString = htmlString.replace(/(\w+ *= *)(\\"|\\'|\\`|"|'|`)*(( *\w+ *)*)(\\"|\\'|\\`|"|'|`)*/gm, '$1"$3"');
 	
 	// LOCATE AND REPLACE < WITH HTML ENTITY ALL NON-CLOSED TAG LIKE EXPRESSION
 	htmlString = htmlString.replace(/<(\w+)(?![^<]*>)/gm, '&lt;$1');
