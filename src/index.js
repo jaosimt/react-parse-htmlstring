@@ -2,7 +2,7 @@
  *   Copyright © 2023 • Jao Solutions, Inc. • All rights reserved.
  */
 
-"use strict";
+'use strict';
 
 import ParseHTML from './ParseHTML';
 import { parseHTMLString, isValidHTMLTag } from './processor';
