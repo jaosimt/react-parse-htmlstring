@@ -5,7 +5,7 @@
 'use strict';
 
 import ParseHTML from './ParseHTML';
-import { parseHTMLString, isValidHTMLTag } from './processor';
+import { parseHTMLString, isValidHTMLTag, fixAttributeQuotes } from './processor';
 
 export default ParseHTML;
-export { parseHTMLString, isValidHTMLTag };
+export { parseHTMLString, isValidHTMLTag, fixAttributeQuotes };
