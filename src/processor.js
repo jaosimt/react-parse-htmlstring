@@ -27,7 +27,7 @@ export const isValidHTMLTag = (function () {
 	};
 })();
 
-export const fixAttributeQuotes = htmlString => htmlString.replace(/(\w+ *= *)(\\"|\\'|\\`|"|'|`)*(( *\w+ *)*)(\\"|\\'|\\`|"|'|`)*/gm, '$1"$3"');
+export const fixAttributeQuotes = htmlString => htmlString.replace(/(< *\w+)(( \w+[-\w]* *= *)(\w+[-\w]*))+( *\/*>)?/gm, '$1$3"$4"$5');
 
 export const parseHTMLString = (htmlString, options = {}) => {
 	if (!isString(htmlString, true)) return htmlString;
@@ -36,14 +36,23 @@ export const parseHTMLString = (htmlString, options = {}) => {
 	const re=new RegExp(`( ${eventAttrs.join('| ')})=['"\`].*?['"\`]([ \\/]*>| \\w+[-\\w+]*)`, 'igm');
 	htmlString = htmlString.replace(re, '$2');
 	
-	const { plainInsert, trim = false } = options,
-		div = document.createElement('div');
+	const div = document.createElement('div');
+	
+	// OPTIONS
+	const { 
+		plainInsert = false, 
+		trim = false, 
+		fixMissingAttributeQuotes = true
+	} = options;
 	
 	if (plainInsert) {
 		// WATCH OUT! THIS COULD BE VERY UNRELIABLE!!!
 		div.innerHTML = htmlString;
 		return div.innerHTML;
 	}
+	
+	if (fixMissingAttributeQuotes)
+		htmlString = fixAttributeQuotes(htmlString);
 	
 	/*
 		FOR A PASTED HTML STRING ESPECIALLY A SVG HTML STRING,
@@ -83,6 +92,14 @@ export const parseHTMLString = (htmlString, options = {}) => {
 	htmlString = htmlString.replace(/(<)( *\w+)/gm, (x, y, z) => {
 		return isValidHTMLTag(z.trim()) ? `${ y }${ z }` : `&lt;${ z }`;
 	});                                                                                    
+	
+	// FINALLY, THERE COULD BE SOME HTML ENTITY REPLACEMENT
+	htmlString = htmlString.replace(/&#x27;/gm, '\'')
+		.replace(/&amp;/gm, '&')
+		// .replace(/&lt;/gm, '<') 
+		// .replace(/&gt;/gm, '>')
+		.replace(/&quot;/gm, '"')
+		.replace(/&#x2F;/gm, '/');
 	
 	// IN THE DEMO PAGE, PASTING A SIMPLE BUT VALID HTML STRING SUCH AS: <strong>Strong</strong>
 	// ONLY TRANSLATES WHEN A SPACE AND A CHARACTER IS ADDED!

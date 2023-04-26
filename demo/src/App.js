@@ -3,7 +3,7 @@ import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
 
 /* FOR DEBUGGING PURPOSES ONLY */
-import ParseHTML, { parseHTMLString  } from '../../src/index';
+import ParseHTML, { fixAttributeQuotes, parseHTMLString } from '../../src/index';
 
 /* USE THIS INSTEAD */
 // import ParseHTML, { parseHTMLString } from 'react-parse-htmlstring';
@@ -58,7 +58,7 @@ export default function App() {
 							<span className="token punctuation">&nbsp;/&gt;</span>
 						</div>
 						<div className="content">
-							<ParseHTML string={ htmlString } className="demo" />
+							<ParseHTML string={ fixAttributeQuotes(htmlString) } className="demo" />
 						</div>
 					</div>
 					<br/>
@@ -88,7 +88,7 @@ export default function App() {
 							<span className="token punctuation">&nbsp;/&gt;</span>
 						</div>
 						<div className="content">
-							<div className="demo" dangerouslySetInnerHTML={ { __html: parseHTMLString(htmlString) } } />
+							<div className="demo" dangerouslySetInnerHTML={ { __html: parseHTMLString(fixAttributeQuotes(htmlString)) } } />
 						</div>
 					</div>
 				</div>
