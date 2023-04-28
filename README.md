@@ -98,105 +98,206 @@ import { parseHTMLString } from 'react-parse-htmlstring';
   <img class="simo-full" src="https://pos.jaosimt.com/sImoLogo-full-red.svg" alt="sImo" />
 </section>
 
-<svg fill="none" style="opacity: 0; height: 0; overflow: hidden" viewBox="0 0 800 400" width="800" height="400" xmlns="http://www.w3.org/2000/svg">
-  <foreignObject width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <style>
-        :root {
-            --primary-color         : #2b6cb0;
-            --text-color            : rgba(74, 85, 104, 1);
-            --bg-dark               : rgba(45, 55, 72, 1);
-            --bg-gray               : #4D4D4D24;
-            --bg-white              : rgba(255, 255, 255, 1);
-            --primary-info          : #93ddfd;
-            --secondary-info        : #009dff12;
-            --primary-success       : #b5f4a5;
-            --secondary-success     : #8afa6b12;
-            --primary-alert         : #ff2a2a;
-            --secondary-alert       : #ff000012;
-            --default-padding       : 1rem;
-            --default-border        : 1px solid rgba(160, 174, 192, 1);
-            --default-border-radius : 3px;
-            --color-code-green      : #b5f4a5;
-            --color-code-yellow     : #ffe484;
-            --color-code-purple     : #d9a9ff;
-            --color-code-red        : #ff2a2a;
-            --color-code-blue       : #93ddfd;
-            --color-code-white      : #fff;
-            --color-code-gold       : #d4a500;
-            --color-code-gray       : rgba(160, 174, 192, 1);
-        }
-        .text-center { text-align: center; }
-        .m-0 { margin: 0 !important; }
-        .m-1 { margin: 0.5rem !important; }
-        .m-2 { margin: 1rem !important; }
-        .mt-0 { margin-top: 0 !important; }
-        .mt-1 { margin-top: 0.5rem !important; }
-        .mt-2 { margin-top: 1rem !important; }
-        .mt-3 { margin-top: 1.5rem !important; }
-        .mt-4 { margin-top: 2rem !important; }
-        .mt-5 { margin-top: 3rem !important; }
-        .mb-0 { margin-bottom: 0 !important; }
-        .mb-1 { margin-bottom: 0.5rem !important; }
-        .mb-2 { margin-bottom: 1rem !important; }
-        .mb-3 { margin-bottom: 1.5rem !important; }
-        .mb-4 { margin-bottom: 2rem !important; }
-        .mb-5 { margin-bottom: 3rem !important; }
-        img.simo-full { width: 147px; max-width: 98%; }
-        .flex { display: flex; }
-        .flex-column { display: flex; flex-direction: column; }
-        .align-items-center { align-items: center; }
-        .justify-content-center { justify-content: center; }
-        .gap-1 { gap: 0.5rem; } 
-        .markdown {
-          padding       : var(--default-padding);
-          overflow      : hidden;
-          text-align    : left;
-          border-radius : 14px;
-          border-left   : 7px solid var(--color-code-gray);
-          border-top    : 1px solid var(--color-code-gray);
-          border-right  : 1px solid var(--color-code-gray);
-          border-bottom : 1px solid var(--color-code-gray);
-        }
-        .markdown.alert {
-          background    : var(--secondary-alert);
-          border-left   : 7px solid var(--primary-alert);
-          border-top    : 1px solid var(--secondary-alert);
-          border-right  : 1px solid var(--secondary-alert);
-          border-bottom : 1px solid var(--secondary-alert);
-        }
-        .markdown.alert > hr { border-color: var(--primary-alert); }
-        .markdown.info {
-          background   : var(--secondary-info);
-          border-left  : 7px solid var(--primary-info);
-          border-top: 1px solid var(--secondary-info);
-          border-right: 1px solid var(--secondary-info);
-          border-bottom: 1px solid var(--secondary-info);
-        }
-        .markdown.info > hr { border-color: var(--primary-info); }
-        .markdown.success {
-          background   : var(--secondary-success);
-          border-left  : 7px solid var(--primary-success);
-          border-top: 1px solid var(--secondary-success);
-          border-right: 1px solid var(--secondary-success);
-          border-bottom: 1px solid var(--secondary-success);
-        }
-        .markdown.success > hr { border-color: var(--primary-success); }
-        .fg-gray { color: var(--color-code-gray); }
-        .separator { border-top: 1px solid var(--color-code-gray); }
-        .pre-wrap { white-space: pre-wrap; }
-        .token {
-          font-weight : 700;
-          color       : var(--color-code-white);
-        }
-        .token.rule { color : var(--color-code-purple); }
-        .token.comment { color : var(--color-code-gray); }
-        .token.punctuation { color : var(--color-code-blue); }
-        .token.tag { color : var(--color-code-red); }
-        .token.method { color : var(--color-code-purple); }
-        .token.attribute.name { color : var(--color-code-yellow); }
-        .token.attribute.value { color : var(--color-code-green); }
-      </style>
-    </div>
-  </foreignObject>
-</svg>
+[//]: # (<svg fill="none" style="opacity: 0; height: 0; overflow: hidden" viewBox="0 0 800 400" width="800" height="400" xmlns="http://www.w3.org/2000/svg">)
+
+[//]: # (  <foreignObject width="100%" height="100%">)
+
+[//]: # (    <div xmlns="http://www.w3.org/1999/xhtml">)
+
+[//]: # (      <style>)
+
+[//]: # (        :root {)
+
+[//]: # (            --primary-color         : #2b6cb0;)
+
+[//]: # (            --text-color            : rgba&#40;74, 85, 104, 1&#41;;)
+
+[//]: # (            --bg-dark               : rgba&#40;45, 55, 72, 1&#41;;)
+
+[//]: # (            --bg-gray               : #4D4D4D24;)
+
+[//]: # (            --bg-white              : rgba&#40;255, 255, 255, 1&#41;;)
+
+[//]: # (            --primary-info          : #93ddfd;)
+
+[//]: # (            --secondary-info        : #009dff12;)
+
+[//]: # (            --primary-success       : #b5f4a5;)
+
+[//]: # (            --secondary-success     : #8afa6b12;)
+
+[//]: # (            --primary-alert         : #ff2a2a;)
+
+[//]: # (            --secondary-alert       : #ff000012;)
+
+[//]: # (            --default-padding       : 1rem;)
+
+[//]: # (            --default-border        : 1px solid rgba&#40;160, 174, 192, 1&#41;;)
+
+[//]: # (            --default-border-radius : 3px;)
+
+[//]: # (            --color-code-green      : #b5f4a5;)
+
+[//]: # (            --color-code-yellow     : #ffe484;)
+
+[//]: # (            --color-code-purple     : #d9a9ff;)
+
+[//]: # (            --color-code-red        : #ff2a2a;)
+
+[//]: # (            --color-code-blue       : #93ddfd;)
+
+[//]: # (            --color-code-white      : #fff;)
+
+[//]: # (            --color-code-gold       : #d4a500;)
+
+[//]: # (            --color-code-gray       : rgba&#40;160, 174, 192, 1&#41;;)
+
+[//]: # (        })
+
+[//]: # (        .text-center { text-align: center; })
+
+[//]: # (        .m-0 { margin: 0 !important; })
+
+[//]: # (        .m-1 { margin: 0.5rem !important; })
+
+[//]: # (        .m-2 { margin: 1rem !important; })
+
+[//]: # (        .mt-0 { margin-top: 0 !important; })
+
+[//]: # (        .mt-1 { margin-top: 0.5rem !important; })
+
+[//]: # (        .mt-2 { margin-top: 1rem !important; })
+
+[//]: # (        .mt-3 { margin-top: 1.5rem !important; })
+
+[//]: # (        .mt-4 { margin-top: 2rem !important; })
+
+[//]: # (        .mt-5 { margin-top: 3rem !important; })
+
+[//]: # (        .mb-0 { margin-bottom: 0 !important; })
+
+[//]: # (        .mb-1 { margin-bottom: 0.5rem !important; })
+
+[//]: # (        .mb-2 { margin-bottom: 1rem !important; })
+
+[//]: # (        .mb-3 { margin-bottom: 1.5rem !important; })
+
+[//]: # (        .mb-4 { margin-bottom: 2rem !important; })
+
+[//]: # (        .mb-5 { margin-bottom: 3rem !important; })
+
+[//]: # (        img.simo-full { width: 147px; max-width: 98%; })
+
+[//]: # (        .flex { display: flex; })
+
+[//]: # (        .flex-column { display: flex; flex-direction: column; })
+
+[//]: # (        .align-items-center { align-items: center; })
+
+[//]: # (        .justify-content-center { justify-content: center; })
+
+[//]: # (        .gap-1 { gap: 0.5rem; } )
+
+[//]: # (        .markdown {)
+
+[//]: # (          padding       : var&#40;--default-padding&#41;;)
+
+[//]: # (          overflow      : hidden;)
+
+[//]: # (          text-align    : left;)
+
+[//]: # (          border-radius : 14px;)
+
+[//]: # (          border-left   : 7px solid var&#40;--color-code-gray&#41;;)
+
+[//]: # (          border-top    : 1px solid var&#40;--color-code-gray&#41;;)
+
+[//]: # (          border-right  : 1px solid var&#40;--color-code-gray&#41;;)
+
+[//]: # (          border-bottom : 1px solid var&#40;--color-code-gray&#41;;)
+
+[//]: # (        })
+
+[//]: # (        .markdown.alert {)
+
+[//]: # (          background    : var&#40;--secondary-alert&#41;;)
+
+[//]: # (          border-left   : 7px solid var&#40;--primary-alert&#41;;)
+
+[//]: # (          border-top    : 1px solid var&#40;--secondary-alert&#41;;)
+
+[//]: # (          border-right  : 1px solid var&#40;--secondary-alert&#41;;)
+
+[//]: # (          border-bottom : 1px solid var&#40;--secondary-alert&#41;;)
+
+[//]: # (        })
+
+[//]: # (        .markdown.alert > hr { border-color: var&#40;--primary-alert&#41;; })
+
+[//]: # (        .markdown.info {)
+
+[//]: # (          background   : var&#40;--secondary-info&#41;;)
+
+[//]: # (          border-left  : 7px solid var&#40;--primary-info&#41;;)
+
+[//]: # (          border-top: 1px solid var&#40;--secondary-info&#41;;)
+
+[//]: # (          border-right: 1px solid var&#40;--secondary-info&#41;;)
+
+[//]: # (          border-bottom: 1px solid var&#40;--secondary-info&#41;;)
+
+[//]: # (        })
+
+[//]: # (        .markdown.info > hr { border-color: var&#40;--primary-info&#41;; })
+
+[//]: # (        .markdown.success {)
+
+[//]: # (          background   : var&#40;--secondary-success&#41;;)
+
+[//]: # (          border-left  : 7px solid var&#40;--primary-success&#41;;)
+
+[//]: # (          border-top: 1px solid var&#40;--secondary-success&#41;;)
+
+[//]: # (          border-right: 1px solid var&#40;--secondary-success&#41;;)
+
+[//]: # (          border-bottom: 1px solid var&#40;--secondary-success&#41;;)
+
+[//]: # (        })
+
+[//]: # (        .markdown.success > hr { border-color: var&#40;--primary-success&#41;; })
+
+[//]: # (        .fg-gray { color: var&#40;--color-code-gray&#41;; })
+
+[//]: # (        .separator { border-top: 1px solid var&#40;--color-code-gray&#41;; })
+
+[//]: # (        .pre-wrap { white-space: pre-wrap; })
+
+[//]: # (        .token {)
+
+[//]: # (          font-weight : 700;)
+
+[//]: # (          color       : var&#40;--color-code-white&#41;;)
+
+[//]: # (        })
+
+[//]: # (        .token.rule { color : var&#40;--color-code-purple&#41;; })
+
+[//]: # (        .token.comment { color : var&#40;--color-code-gray&#41;; })
+
+[//]: # (        .token.punctuation { color : var&#40;--color-code-blue&#41;; })
+
+[//]: # (        .token.tag { color : var&#40;--color-code-red&#41;; })
+
+[//]: # (        .token.method { color : var&#40;--color-code-purple&#41;; })
+
+[//]: # (        .token.attribute.name { color : var&#40;--color-code-yellow&#41;; })
+
+[//]: # (        .token.attribute.value { color : var&#40;--color-code-green&#41;; })
+
+[//]: # (      </style>)
+
+[//]: # (    </div>)
+
+[//]: # (  </foreignObject>)
+
+[//]: # (</svg>)
