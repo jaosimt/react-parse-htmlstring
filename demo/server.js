@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
 const config = require('./webpack.config');
 
-const port = 3000;
+const port = 3001;
 
 const server = new WebpackDevServer({
 	compress: false,
