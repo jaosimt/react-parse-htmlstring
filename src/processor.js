@@ -106,7 +106,7 @@ export const parseHTMLString = (htmlString, options = {}) => {
 
 	// 09072023 FAILURE ON RENDERING WITH '<tag1>...</tag1> <tag2>...</tag2>'
 	// SPACE BETWEEN tag1 CLOSING AND tag2 OPENING TAGS IS MESSING IT UP!
-	 htmlString.replace(/(<[ /]*\w+ *>)( +)(<[ /]*\w+ *>)/igm, (m, x, y, z) => {
+	htmlString = htmlString.replace(/(<[ /]*\w+ *>)( +)(<[ /]*\w+ *>)/igm, (m, x, y, z) => {
      	return `${x}${'&nbsp'.repeat(y.length)}${z}`
      })
 	
