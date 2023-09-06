@@ -103,6 +103,12 @@ export const parseHTMLString = (htmlString, options = {}) => {
 		// .replace(/&gt;/gm, '>')
 		.replace(/&quot;/gm, '"')
 		.replace(/&#x2F;/gm, '/');
+
+	// 09072023 FAILURE ON RENDERING WITH '<tag1>...</tag1> <tag2>...</tag2>'
+	// SPACE BETWEEN tag1 CLOSING AND tag2 OPENING TAGS IS MESSING IT UP!
+	 htmlString.replace(/(<[ /]*\w+ *>)( +)(<[ /]*\w+ *>)/igm, (m, x, y, z) => {
+     	return `${x}${'&nbsp'.repeat(y.length)}${z}`
+     })
 	
 	// IN THE DEMO PAGE, PASTING A SIMPLE BUT VALID HTML STRING SUCH AS: <strong>Strong</strong>
 	// ONLY TRANSLATES WHEN A SPACE AND A CHARACTER IS ADDED!
