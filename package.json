@@ -19,19 +19,19 @@
   "main": "dist/index.js",
   "scripts": {
     "clean": "rimraf dist lib node_modules demo/dist demo/node_modules",
-    "build": "npm install && npm run build:production && cd demo && npm install && npm run build && cd ..",
+    "build": "yarn install && yarn run build:production && cd demo && yarn install && yarn run build && cd ..",
     "build:production": "webpack --config webpack.config.production.js && rimraf dist && babel ./src --out-dir ./dist --copy-files --no-comments --compact --ignore 'src/index.js'",
-    "prerelease": "npm run clean && npm adduser",
-    "release": "npm run build",
-    "postrelease": "git push --follow-tags && npm publish && cd demo && npm install react-parse-htmlstring@latest && cd .. && npm run demo:publish",
-    "release:patch": "npm version patch && npm run release",
-    "release:minor": "npm version minor && npm run release",
-    "release:major": "npm version major && npm run release",
+    "prerelease": "yarn run clean && npm adduser",
+    "release": "yarn run build",
+    "postrelease": "git push --follow-tags && npm publish && cd demo && yarn upgrade react-parse-htmlstring@latest && cd .. && yarn run demo:publish",
+    "release:patch": "npm version patch && yarn run release",
+    "release:minor": "npm version minor && yarn run release",
+    "release:major": "npm version major && yarn run release",
     "demo:dev": "cd demo && node ./server.js",
     "demo:clean": "rimraf demo/dist demo/node_modules",
-    "demo:build": "cd demo && npm install && npm run build",
+    "demo:build": "cd demo && yarn install && yarn run build",
     "demo:push": "cd demo/dist && git init && git commit --allow-empty -m 'update demo' && git checkout -b gh-pages && git add . && git commit -am 'update demo' && git push git@github.com:jaosimt/react-parse-htmlstring gh-pages --force",
-    "demo:publish": "npm run demo:clean && npm run demo:build && npm run demo:push"
+    "demo:publish": "yarn run demo:clean && yarn run demo:build && yarn run demo:push"
   },
   "keywords": [
     "react",
