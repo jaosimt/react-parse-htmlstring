@@ -3767,10 +3767,10 @@ react-dom@^18.2.0, react-dom@>=16.14.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
-react-parse-htmlstring@^3.0.17:
-  version "3.0.17"
-  resolved "https://registry.npmjs.org/react-parse-htmlstring/-/react-parse-htmlstring-3.0.17.tgz"
-  integrity sha512-xe/5dCV9GKn8VF6rFR4u+HWxkaIlAU3E++WthXSgMbERg+LQ7Ub4IBEfksllBu5f399S0cYY5INhvpxpU69Qiw==
+react-parse-htmlstring@^3.0.18:
+  version "3.0.18"
+  resolved "https://registry.npmjs.org/react-parse-htmlstring/-/react-parse-htmlstring-3.0.18.tgz"
+  integrity sha512-p910i62LvUTTCFtny3/XfTkPjagoq4AbSfcRLZB45JdwejvEH4LjH0DZFg2fjbFr50ILjVRurf9FOuSmLupemA==
   dependencies:
     classnames "^2.3.2"
 
