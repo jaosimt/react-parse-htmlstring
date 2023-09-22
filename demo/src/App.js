@@ -3,7 +3,7 @@ import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
 
 // /* FOR DEBUGGING PURPOSES ONLY */ import ParseHTML, { fixAttributeQuotes, parseHTMLString } from '../../src/index';
-/* USE THIS INSTEAD            */ import ParseHTML, { fixAttributeQuotes, parseHTMLString } from 'react-parse-htmlstring';
+/* USE THIS INSTEAD */ import ParseHTML, { fixAttributeQuotes, parseHTMLString } from 'react-parse-htmlstring';
 
 import './styles.scss';
 
