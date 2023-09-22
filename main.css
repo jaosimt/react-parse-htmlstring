@@ -1,0 +1,222 @@
+/*!************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/react-tooltip/dist/react-tooltip.min.css ***!
+  \************************************************************************************************************************************************/
+:root {
+  --rt-color-white:#fff;
+  --rt-color-dark:#222;
+  --rt-color-success:#8dc572;
+  --rt-color-error:#be6464;
+  --rt-color-warning:#f0ad4e;
+  --rt-color-info:#337ab7;
+  --rt-opacity:0.9; }
+
+.core-styles-module_tooltip__3vRRp {
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transition: opacity .3s ease-out;
+  visibility: hidden;
+  will-change: opacity,visibility; }
+
+.core-styles-module_fixed__pcSol {
+  position: fixed; }
+
+.core-styles-module_arrow__cvMwQ {
+  background: inherit;
+  position: absolute; }
+
+.core-styles-module_noArrow__xock6 {
+  display: none; }
+
+.core-styles-module_clickable__ZuTTB {
+  pointer-events: auto; }
+
+.core-styles-module_show__Nt9eE {
+  opacity: var(--rt-opacity);
+  visibility: visible; }
+
+.styles-module_tooltip__mnnfp {
+  border-radius: 3px;
+  font-size: 90%;
+  padding: 8px 16px;
+  width: max-content; }
+
+.styles-module_arrow__K0L3T {
+  height: 8px;
+  width: 8px; }
+
+[class*=react-tooltip__place-top] > .styles-module_arrow__K0L3T {
+  transform: rotate(45deg); }
+
+[class*=react-tooltip__place-right] > .styles-module_arrow__K0L3T {
+  transform: rotate(135deg); }
+
+[class*=react-tooltip__place-bottom] > .styles-module_arrow__K0L3T {
+  transform: rotate(225deg); }
+
+[class*=react-tooltip__place-left] > .styles-module_arrow__K0L3T {
+  transform: rotate(315deg); }
+
+.styles-module_dark__xNqje {
+  background: var(--rt-color-dark);
+  color: var(--rt-color-white); }
+
+.styles-module_light__Z6W-X {
+  background-color: var(--rt-color-white);
+  color: var(--rt-color-dark); }
+
+.styles-module_success__A2AKt {
+  background-color: var(--rt-color-success);
+  color: var(--rt-color-white); }
+
+.styles-module_warning__SCK0X {
+  background-color: var(--rt-color-warning);
+  color: var(--rt-color-white); }
+
+.styles-module_error__JvumD {
+  background-color: var(--rt-color-error);
+  color: var(--rt-color-white); }
+
+.styles-module_info__BWdHW {
+  background-color: var(--rt-color-info);
+  color: var(--rt-color-white); }
+
+/*!**********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles.scss ***!
+  \**********************************************************************************************************/
+:root {
+  --primary-color: #2b6cb0;
+  --text-color: rgba(74, 85, 104, 1);
+  --bg-dark: rgba(45, 55, 72, 1);
+  --bg-gray: rgba(7, 21, 59, 0.1);
+  --bg-white: rgba(255, 255, 255, 1);
+  --default-padding: 1rem;
+  --default-border: 1px solid rgba(160, 174, 192, 1);
+  --default-border-radius: 3px;
+  --color-code-green: #b5f4a5;
+  --color-code-yellow: #ffe484;
+  --color-code-purple: #d9a9ff;
+  --color-code-red: #ff8383;
+  --color-code-blue: #93ddfd;
+  --color-code-white: #fff;
+  --color-code-gold: #d4a500;
+  --color-code-gray: rgba(160, 174, 192, 1); }
+
+body {
+  padding: 1rem;
+  color: var(--text-color);
+  font-family: "JetBrains Mono", "Courier New", sans-serif; }
+
+.grid-container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 100%; }
+
+.grid-item > textarea {
+  min-height: 200px; }
+
+.p-1 {
+  padding: 0.5rem !important; }
+
+.m-0 {
+  margin: 0 !important; }
+
+.mt-0 {
+  margin-top: 0 !important; }
+
+.mt-1 {
+  margin-top: 1rem !important; }
+
+.mt-2 {
+  margin-top: 2rem !important; }
+
+.mb-0 {
+  margin-bottom: 0 !important; }
+
+.mb-1 {
+  margin-bottom: 1rem !important; }
+
+.mb-2 {
+  margin-bottom: 2rem !important; }
+
+textarea {
+  padding: var(--default-padding);
+  border: var(--default-border);
+  border-radius: var(--default-border-radius);
+  width: calc(100% - 2rem);
+  outline: 0; }
+  textarea:hover {
+    border: 1px solid var(--primary-color); }
+    textarea:hover:focus {
+      border: 1px solid var(--primary-color); }
+
+button {
+  color: #fff;
+  background-color: var(--primary-color);
+  opacity: 0.7;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 1rem 1.5rem;
+  border-radius: var(--default-border-radius);
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
+  transition: all ease-in-out 100ms; }
+  button:hover {
+    opacity: 1; }
+    button:hover:focus {
+      opacity: 0.7; }
+
+.demo {
+  background: var(--bg-white);
+  padding: var(--default-padding);
+  border-radius: var(--default-border-radius);
+  border: var(--default-border);
+  display: inline-block;
+  white-space: pre-wrap; }
+
+.markdown {
+  background-color: var(--bg-dark);
+  color: var(--color-code-white);
+  font-family: "JetBrains Mono", "Courier New", sans-serif;
+  padding: var(--default-padding); }
+
+.markdown-wrapper {
+  border: 1px solid var(--color-code-gray);
+  border-radius: var(--default-border-radius); }
+  .markdown-wrapper > .header {
+    padding: var(--default-padding);
+    margin: 0; }
+  .markdown-wrapper > .content {
+    padding: var(--default-padding);
+    background: var(--bg-gray);
+    text-align: center;
+    overflow: hidden; }
+    .markdown-wrapper > .content > * {
+      max-width: calc(100% - calc(var(--default-padding) * 2)); }
+    .markdown-wrapper > .content > .demo {
+      text-align: initial; }
+
+.token {
+  font-weight: 700;
+  color: var(--color-code-white); }
+  .token.rule {
+    color: var(--color-code-purple); }
+  .token.comment {
+    color: var(--color-code-gray); }
+  .token.punctuation {
+    color: var(--color-code-blue); }
+  .token.tag {
+    color: var(--color-code-red); }
+  .token.method {
+    color: var(--color-code-purple); }
+  .token.attribute.name {
+    color: var(--color-code-yellow); }
+  .token.attribute.value {
+    color: var(--color-code-green); }
+
+.tooltip-override {
+  color: var(--color-code-white);
+  background: #93c4d1; }
+
