@@ -20,7 +20,7 @@
   "scripts": {
     "install_rimraf": "npm install rimraf -g",
     "clean": "rimraf dist lib node_modules demo/dist demo/node_modules",
-    "build": "yarn run clean && yarn install && yarn run build:production && cd demo && yarn install && yarn run build && cd ..",
+    "build": "yarn install && yarn run build:production && cd demo && yarn install && yarn run build && cd ..",
     "build:production": "webpack --config webpack.config.production.js && rimraf dist && babel ./src --out-dir ./dist --copy-files --no-comments --compact --ignore 'src/index.js'",
     "prerelease": "yarn run clean && npm adduser",
     "release": "yarn run build",
