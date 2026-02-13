@@ -3913,10 +3913,10 @@ react-dom@^18.2.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
-react-parse-htmlstring@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/react-parse-htmlstring/-/react-parse-htmlstring-4.1.0.tgz#8b3e6c8846ce3325cd72c2068e2ad14864006742"
-  integrity sha512-29JokcBxHxERog8+W7CZgI1cySHfTJwP6Qo9kIQzSay+svu2e87AhurOwNJfr2C+RhsdtMxUNVmJX6OWC69OQw==
+react-parse-htmlstring@^4.1.3:
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/react-parse-htmlstring/-/react-parse-htmlstring-4.1.3.tgz#9a13c3fe1da77f6d079a953b0258dc23201581c6"
+  integrity sha512-fE8hCpJTrhMNYGiTjIdjQa65jlJvRI39JmfILpnjbZAQ46cw9X2Y+EChwNZvW5HVp0W8uJL1cE/lrQ7HXwEr3A==
   dependencies:
     classnames "^2.3.2"
 
