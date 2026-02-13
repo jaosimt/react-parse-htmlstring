@@ -24,7 +24,7 @@
     "build:production": "webpack --config webpack.config.production.js && rimraf dist && babel ./src --out-dir ./dist --copy-files --no-comments --compact --ignore 'src/index.js'",
     "prerelease": "yarn run clean && npm adduser",
     "release": "yarn run build",
-    "postrelease": "git push --follow-tags && npm publish && cd demo && yarn upgrade react-parse-htmlstring@latest && cd .. && yarn run demo:publish",
+    "postrelease": "git push --follow-tags && cd demo && yarn upgrade react-parse-htmlstring@latest && cd .. && yarn run demo:publish",
     "release:patch": "npm version patch && yarn run release",
     "release:minor": "npm version minor && yarn run release",
     "release:major": "npm version major && yarn run release",
